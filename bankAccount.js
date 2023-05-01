@@ -74,7 +74,7 @@ let myFirstTransaction = new Transaction(12.50, "Jil Joe");
 // console.log(myFirstTransaction.amount);
 
 myFirstBankAccount.deposit(100.50);
-myFirstBankAccount.charge(10.50, "Jil Joe")
+myFirstBankAccount.charge(12.50, "Jil Joe")
 
 // console.log(myFirstBankAccount.transactions)
 myFirstBankAccount.balance();
