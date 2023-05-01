@@ -2,7 +2,8 @@
 
 class BankAccount {
   constructor(_accountNumber, _owner) {
-    (this.accountNumber = _accountNumber), (this.owner = _owner);
+    (this.accountNumber = _accountNumber), 
+    (this.owner = _owner);
   }
 
 transactions = [];
@@ -40,29 +41,26 @@ charge(payee, amt)
 };
 
 
-
 class Transaction {
   constructor(_amount, _payee) {
-    (this.amount = _amount), (this.payee = _payee);
+    (this.amount = _amount), 
+    (this.payee = _payee);
 
     const d = new Date();
-    date = d.getday();
+    this.date = `${d.getMonth()} - ${d.getDate()} - ${d.getFullYear()}`;
   }
-
-  date = "";
+  date
 }
 
-class SavingAccount{
-
-}
 
 let myFirstBankAccount = new BankAccount("account123", "James Johnson");
 
-// let myFirstTransaction = new Transaction(12.50, "Jil Joe");
+let myFirstTransaction = new Transaction(12.50, "Jil Joe");
 
-console.log(myFirstTransaction.date);
+console.log(myFirstTransaction.amount);
 
 myFirstBankAccount.deposit(10.50);
 myFirstBankAccount.deposit(100.50)
 
+// console.log(myFirstBankAccount.transactions)
 myFirstBankAccount.balance();
